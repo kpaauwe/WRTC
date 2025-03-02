@@ -1,0 +1,142 @@
+body {
+    background-color:black;
+    font-family:'Courier New', Courier, monospace;
+    overflow:auto;
+    text-align: justify;
+}
+h1 {
+    font-family: "Lucida Handwriting", cursive;
+    color:white;
+}
+h2 {
+    color:white;
+}
+p {
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+}
+nav li {
+    display: inline;
+    text-decoration: none;
+    }
+    nav a {
+    text-decoration: none;
+    }
+
+div.navbar {
+	position:sticky; 
+	top: 0; 
+	overflow: hidden;
+	background-color:black;
+	height: fit-content;
+	max-width:100%;
+    float: none;
+    border-bottom: 5px solid #1aa89c;
+}
+
+button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+    width: 16.66%;
+    height:max-content;
+}
+
+button.button1 {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+    width: 16.66%;
+    height:max-content;
+    float: left;
+    }
+
+button.button1:hover {
+background-color: #1aa89c;
+color: black;
+}
+
+button.button2 {
+background-color: grey;
+color: black;
+border: 5px solid #008CBA;
+}
+
+button.button2:hover {
+background-color: #008CBA;
+color: white;
+}
+
+button.button3 {
+background-color: salmon;
+color: black;
+border: 5px solid burlywood;
+}
+
+button.button3:hover {
+background-color: burlywood;
+color: purple;
+}
+
+img.headerPhoto {
+    max-height:auto;
+    max-width:100%;
+    height:auto;
+    width:100%;
+    object-fit: cover;
+    display:flex;
+}
+img.footerPhoto {
+    max-height:auto;
+    max-width:100%;
+    height:auto;
+    width:100%;
+    object-fit: cover;
+    display:flex;
+}
+.footerContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background-color: black;
+    }
+
+a.inLineLink {
+    text-decoration: none;
+    font-weight:bold;
+    color:white;
+}
+a.inLineLink:visited {
+    text-decoration:none;
+}
+a.inLineLink:hover {
+    text-decoration: underline;
+}
+a.inLineLink:active {
+    text-decoration: underline;;
+}
+
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px;
+  }
+
+div.scroll-container img {
+    padding: 0px;
+    }
