@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Square</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            /*background-color: #f0f0f0;*/
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <h1 id ='score'></h1>
+
+    <script>
+        //Init Score
+        var score = 0;
+        // Set up canvas
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas to full window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // Square properties
+        const square = {
+            x: canvas.width / 2,
+            y: 30,
+            size: 50,
+            dx: 3,
+            dy: 1,
+            color: '#3498db'
+        };
+
+        const paddle = {
+            x: canvas.width /2 - 75,
+            y: canvas.height - 30,
+            length: 20,
+            width: 150,
+            speed: 10,
+            color: '#000000' 
+        };
+        
+        // Mouse position
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Track mouse position
+        canvas.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        });
+
+        let leftPressed = false;
+        let rightPressed = false;
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                leftPressed = true;
+            } else if (event.key === 'ArrowRight') {
+                rightPressed = true;
+            }
+        });
+
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'ArrowLeft') {
+                leftPressed = false;
+            } else if (event.key === 'ArrowRight') {
+                rightPressed = false;
+            }
+        });
+        
+        // Main animation loop
+        function animate() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw square
+            ctx.fillStyle = square.color;
+            ctx.fillRect(square.x, square.y, square.size, square.size);
+            
+            //Draw Paddle
+            ctx.fillstyle = paddle.color;
+            ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.length);
+
+            // Move square
+            square.dy += 0.3;
+            square.x += square.dx;
+            square.y += square.dy;
+            
+            // Check for wall collisions
+            if (square.x <= 0 || square.x + square.size >= canvas.width) {
+                square.dx *= -1;
+            }
+            
+            if (square.y <= 0 || square.y + square.size >= canvas.height) {
+                square.dy *= -1;
+            }
+            
+            // Check for mouse collision with the square
+            if (mouseX >= square.x && mouseX <= square.x + square.size &&
+                mouseY >= square.y && mouseY <= square.y + square.size) {
+                
+                // Determine which side of the square was hit
+                const centerX = square.x + square.size / 2;
+                const centerY = square.y + square.size / 2;
+                
+                // Calculate distances from the mouse to the sides of the square
+                const distLeft = mouseX - square.x; // Distance to the left side
+                const distRight = (square.x + square.size) - mouseX; // Distance to the right side
+                const distTop = mouseY - square.y; // Distance to the top side
+                const distBottom = (square.y + square.size) - mouseY; // Distance to the bottom side
+                
+                // Find the minimum distance to determine which side was hit
+                const minDist = Math.min(distLeft, distRight, distTop, distBottom);
+                
+                // Change direction based on the side hit
+                if (minDist === distLeft) {
+                    square.dx *= -1; // Move right
+                } else if (minDist === distRight) {
+                    square.dx *= -1; // Move left
+                } else if (minDist === distTop) {
+                    square.dy *= -1; // Move down
+                } else if (minDist === distBottom) {
+                    square.dy *= -1; // Move up
+                }
+                
+                // Change color on hit
+                square.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            }
+
+
+            //Check for Paddle collsion
+            if (square.y + square.size >= paddle.y &&
+                square.x + square.size >= paddle.x &&
+                square.x <= paddle.x + paddle.width) {
+                    square.dy *= -1;
+                    score++;
+                    document.getElementById('score').innerHTML = "Score: " + score + "<br>";
+                    square.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            }
+
+            //Move Paddle
+            if (leftPressed && paddle.x > 0) {
+                paddle.x -= paddle.speed;
+            } else if (rightPressed && paddle.x + paddle.width < canvas.width) {
+                paddle.x += paddle.speed;
+            }
+            
+            // Check if square falls below the paddle
+            if (square.y + square.size > canvas.height) {
+                // Reset square position
+                square.x = canvas.width / 2;
+                square.y = 30;
+                square.dx = 3; // Reset direction
+                square.dy = 1; // Reset direction
+            }
+
+            requestAnimationFrame(animate);
+        }
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>

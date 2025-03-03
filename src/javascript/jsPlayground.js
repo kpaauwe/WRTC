@@ -100,12 +100,12 @@ function calculateFibonacci(numOne,numTwo,i,input) {
         var input = prompt("Find Fibonacci number at index: (Enter Zero-based Positive Integer)");
         if (useTimer) timer().timerStart();
     }
-    if (i < input) {
+    if (i < input && numTwo !== Infinity) {
         let numThree = numOne + numTwo;
         i++;
         calculateFibonacci(numTwo, numThree, i,input);
     } else {
-        document.getElementById("fibonacci").innerHTML = "<br>The " + i + "th Fibonnaci Number is: " + numOne + "<br>";
+        document.getElementById("fibonacci").innerHTML = "<br>The " + input + "th Fibonnaci Number is: " + numOne + "<br>";
         if (useTimer) {
             timer().timerStop();
             timer().timerPrint();
