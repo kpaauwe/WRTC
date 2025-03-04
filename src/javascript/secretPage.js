@@ -31,8 +31,8 @@ function handleNavClick(item) {
         }
     }
     if (userSequence.length === correctSequence.length) {
-        console.log("Correct Sequence");
-        window.open('../notWRTC/secretPage.html');
+        alert("You found the hidden page!");
+        window.open('../notWRTWC/secretPage.html');
     }
 
 }

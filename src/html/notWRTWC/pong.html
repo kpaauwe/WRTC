@@ -200,8 +200,16 @@
             
             // Check if square passed the paddle
             if (square.x + square.size > canvas.width || square.x < 0) {
-                if (square.x + square.size > canvas.width) alert("Player 1 Wins!\nScore: " + score);
-                if (square.x < 0) alert("Player 2 Wins!\nScore: " + score);
+                    var keepPlaying = true;
+                if (square.x + square.size > canvas.width) {
+                    exitGame = confirm("Player 1 Wins!\nScore: " + score + "\nWould you like to play again?");
+                }
+                if (square.x < 0) {
+                    exitGame = confirm("Player 2 Wins!\nScore: " + score + "\nWould you like to play again?");
+                }
+                if (!exitGame) {
+                    window.open("secretPage.html", "_self");
+                }
                 // Reset square position
                 square.x = canvas.width / 2;
                 square.y = canvas.height / 2;
