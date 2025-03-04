@@ -32,7 +32,6 @@ function handleNavClick(item) {
     }
     if (userSequence.length === correctSequence.length) {
         console.log("Correct Sequence");
-        sleep(2000);
         window.open('../notWRTC/secretPage.html');
     }
 
