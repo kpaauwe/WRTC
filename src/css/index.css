@@ -8,10 +8,8 @@ h1 {
     font-family: "Lucida Handwriting", cursive;
     color:white;
 }
-h2 {
-    color:white;
-}
-p {
+
+p, h2 {
     font-family:'Times New Roman', Times, serif;
     color:white;
     
