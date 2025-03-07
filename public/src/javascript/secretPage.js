@@ -32,7 +32,7 @@ function handleNavClick(item) {
     }
     if (userSequence.length === correctSequence.length) {
         alert("You found the hidden page!");
-        window.open('../notWRTWC/secretPage.html');
+        window.open('../html/notWRTWC/secretPage.html');
         localStorage.clear();
     }
 

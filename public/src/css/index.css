@@ -3,20 +3,41 @@ body {
     font-family:'Courier New', Courier, monospace;
     overflow:auto;
     text-align: justify;
+    color:white;
 }
 h1 {
     font-family: "Lucida Handwriting", cursive;
     color:white;
+    text-align: center;
 }
-
-p, h2 {
+h1.pageTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 300%;
+    font-family: 'Courier New', Courier, monospace;
+}
+p, h2, h3, h4, h5 {
     font-family:'Times New Roman', Times, serif;
-    color:white;
-    
+    text-align: center;
 }
 .longtext {
     width: 80%;
     margin: auto;
+    text-align: justify;
+}
+
+.coachDesc {
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
+    text-align: justify;
+    transition-duration: 1s;
+    overflow: auto;
+    margin:auto;
+    font-size: x-small;
+}
+.certifications {
+    text-align: center;
 }
 nav li {
     display: inline;
@@ -37,6 +58,15 @@ div.navbar {
     border-bottom: 5px solid #1aa89c;
 }
 
+div.selectTest {
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    gap:10px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
 button {
     border: none;
     color: white;
@@ -45,7 +75,6 @@ button {
     font-size: 16px;
     transition-duration: 0.8s;
     cursor: pointer;
-    width: 16.66%;
     height:max-content;
 }
 
@@ -58,9 +87,10 @@ button.button1 {
     font-size: 16px;
     transition-duration: 0.8s;
     cursor: pointer;
-    width: 16.66%;
-    height:max-content;
+    width: 16.667%;
     float: left;
+    word-wrap: break-word;
+    white-space: normal;
     }
 
 button.button1:hover {
@@ -71,7 +101,15 @@ color: black;
 button.button2 {
 background-color: grey;
 color: black;
-border: 5px solid #008CBA;
+height: 150px;
+width: 30vw;
+max-width:100%;
+border: 15px solid #008CBA;
+padding: 25px;
+margin: 10px;
+font-family:fantasy;
+word-wrap: break-word;
+font-size: 3vw;
 }
 
 button.button2:hover {
@@ -106,10 +144,19 @@ img.footerPhoto {
     object-fit: cover;
     display:flex;
 }
+img.profilePic {
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: auto;
+    height: auto;
+    overflow:hidden;
+    border: 2px solid white;
+}
 .footerContainer {
     position: relative;
     text-align: center;
     color: white;
+    margin-top: 20%;
   }
 .top-right {
     position: absolute;
@@ -143,3 +190,18 @@ div.scroll-container {
 div.scroll-container img {
     padding: 0px;
     }
+
+div.coaches {
+    max-width: 100%;
+    width: 100%;
+    float: left;
+    display:flex;
+    gap: 20px;
+    float:left;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+}
+div.coach {
+    width: 30%;
+}
