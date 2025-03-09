@@ -150,12 +150,15 @@ img.footerPhoto {
 }
 img.profilePic {
     border-radius: 50%;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 50vw;
+    max-height: 50vw;
     height: 30vw;
     width: 30vw;
     overflow:hidden;
     object-fit:cover;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
     object-position: center top;
     border: 2px solid white;
 }
