@@ -1,51 +1,204 @@
 <!DOCTYPE html>
 <html lang ="en">
-    <head>
-        <title>Coaching | We Run The World Coaching | Calgary</title>
-        <script src="../javascript/secretPage.js"defer></script>
-        <link rel="stylesheet" href="../css/index.css">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <img class="headerPhoto" src="../../Resources/images/HeaderPhoto.jpg" alt="track night at WRTWC">
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li id="home">
-                        <a class="inLineLink" href="../../index.html">
-                            <button class="button1">Home</button>
-                        </a>
-                    </li>
-                    <li id="about">
-                        <a class="inLineLink" href="aboutUs.html">
-                            <button class="button1">About Us</button>
-                        </a>
-                    </li>
-                    <li id="blog">
-                        <a class="inLineLink" href="blog.html">
-                            <button class="button1">Blog</button>
-                        </a>
-                    </li>
-                    <li id="pricing">
-                        <a class="inLineLink" href="pricing.html">
-                            <button class="button1">Pricing & Options</button>
-                        </a>
-                    </li>
-                    <li id="testimonials">
-                        <a class="inLineLink" href="testimonials.html">
-                            <button class="button1">Testimonials</button>
-                        </a>
-                    </li>
-                    <li id="profile">
-                        <a class="inLineLink" href="profile.html">
-                            <button class="button1">Profile</button>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+<head>
+    <title>Coaching | We Run The World Coaching | Calgary</title>
+    <script src="../javascript/secretPage.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../javascript/testimonials.js" defer></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        <meta charset="UTF-8">
+</head>
+<body>
+    <img class="headerPhoto" src="../../Resources/images/HeaderPhoto.jpg" alt="track night at WRTWC">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li id="home">
+                    <a class="inLineLink" href="../../index.html">
+                        <button class="button1">Home</button>
+                    </a>
+                </li>
+                <li id="about">
+                    <a class="inLineLink" href="aboutUs.html">
+                        <button class="button1">About Us</button>
+                    </a>
+                </li>
+                <li id="blog">
+                    <a class="inLineLink" href="blog.html">
+                        <button class="button1">Blog</button>
+                    </a>
+                </li>
+                <li id="pricing">
+                    <a class="inLineLink" href="pricing.html">
+                        <button class="button1">Pricing & Options</button>
+                    </a>
+                </li>
+                <li id="testimonials">
+                    <a class="inLineLink" href="testimonials.html">
+                        <button class="button1">Testimonials</button>
+                    </a>
+                </li>
+                <li id="profile">
+                    <a class="inLineLink" href="profile.html">
+                        <button class="button1">Profile</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <h1 class="text-5xl m-10 animate-pulse">Testimonials</h1>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">What Our Clients Say</h2>
+        
+        <!-- Testimonials Container -->
+        <div class="relative">
+            <!-- Testimonial 1 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "Mel has been exactly what I needed in a coach, I have seen improvement in my race results and what I believe i'm capable of. She's given me the mental and physical push to work towards new goals."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Christina S.</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "John helped me with my overall running form. He explains reasons behind things. And to convey it to a newbie to running is a huge help for my growth. He motivates me during and after those tough workouts, which is a huge help since I usually train solo
+                    in the small town of Olds, AB. Being part of WRTWC is the best, especially if you
+                    want to chase PBs."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Darwin S.</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "I'm fairly new to running. Paula has been great at meeting me at my level while at the same time pushing me towards improvement. The training program is customized and gets tweaked as needed. She always checks in on how I'm feeling and provides really encouraging feedback. I can't recommend WRTWC and Paula enough!"
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Pato M.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "I am grateful to have discovered WRTWC. Laura has provided me with outstanding support and created plans that enabled me to achieve results that I had previously believed were unattainable."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Laura W.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "Bre's knowledge and passion for strength helped me become a more confident runner as I built up appropriate strength tailored specifically to my needs as a runner. She's a kind, honest, professional and supportive coach."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Matija T.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "Bre took a look into my injury history and, using details from my physio reports, crafted a targeted strength program to build up my biomechanical weaknesses. She maintained careful watch and adjusted the workouts to continue the strength improvements and keep me injury free!"
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">John B.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "Not only have I achieved results I never would have dream of under Mel's coaching, but my confidence as a runner and woman has grown immensely. I am so grateful to her and the WRTWC community."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Brianne C.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "I had run 4 marathons before starting with Mel, I never knew it was possible to run strong through the entire race and actually enjoy the whole marathon, until I ran the 5th under Mel's amazing coaching"
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Laura H.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 9-->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "After having ran multiple races over several years, my running had stagnated. Coach Mel did a deep analysis of my running and gave me the tools and a plan, that worked with my hectic work schedule, to reach the race goal that kept eluding me. On top of that, I've met a fantastic group of positive runners to share my passion for running."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">John B.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-6 transition-all duration-300">
+                <p class="text-gray-600 italic mb-4">
+                    "I never knew it was possible to run faster after two babies, but I set new personal records in all distances under Mel's coaching and have had a blast while doing it."
+                </p>
+                <div class="flex items-center">
+                    <div>
+                        <h4 class="font-bold text-black">Amber V.</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <h1>Testimonials Page</h1>
+        
+        <!-- Navigation Controls -->
+        <div class="flex justify-center mt-8 space-x-4">
+            <button id="prev-button" class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-button" class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
-    </body>
+    </div>
+    <footer>
+        <div class="footerContainer">
+            <img class="footerPhoto" src="../../Resources/images/WRTC_banner1.jpg" alt="WRTWC Banner">
+        </div>
+    </footer>
+</body>
 </html>

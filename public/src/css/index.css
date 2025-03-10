@@ -1,13 +1,13 @@
-@import "tailwindcss";
-
 body {
     background-color:black;
-    font-family:'Courier New', Courier, monospace;
     overflow:auto;
     text-align: justify;
     color:white;
     max-width:100%;
     overflow-x:hidden;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;  
 }
 h1 {
     font-family: "Lucida Handwriting", cursive;
