@@ -2,13 +2,21 @@
 <html lang ="en">
 <head>
     <title>Coaching | We Run The World Coaching | Calgary</title>
+    <script src="src/javascript/secretPage.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="background-color: #111827;">
+<body style="background-color: #111827; overflow-x:visible; max-width: none;">
+    <video autoplay muted loop id="myVideo">
+        <source src="Resources/videos/kieranClips.mp4" type="video/mp4">
+    </video>
     <header>
         <div>
             <img class="headerPhoto" src="Resources/images/HeaderPhoto.jpg" alt="track night at WRTWC">
@@ -49,8 +57,9 @@
                 </nav>
             </div>
         </header>
-        <div>
-            <h2 class="longtext">
+        <div class="content">
+
+            <h2 class="longtext text-2xl animate-pulse">
                 Mission: To create a running community, locally and online, 
                 where all levels feel supported, challenged, and passionate in their pursuit of running goals.
             </h2>
@@ -67,11 +76,11 @@
                 WRTWC can't wait to have you a part of the team and help you experience the joy of running towards your goals and having a clear path to get there.
             </p>
         </div>
-        <div class="scroll-container">
-            <img src="Resources/images/track4.JPG" alt="track night picture" width="600" height="400">
-            <img src="Resources/images/track3.JPG" alt="track night picture" width="600" height="400">
-            <img src="Resources/images/melBack.JPG" alt="Head coach" width="600" height="400">
-            <img src="Resources/images/track5.JPG" alt="Track night group picture" width="600" height="400">
+        <div id="scrollcontainer" class="overflow-x-scroll overscroll-contain whitespace-nowrap p-4 inline-flex">
+            <img src="Resources/images/track4.JPG" alt="track night picture" width="400" height="200">
+            <img src="Resources/images/track3.JPG" alt="track night picture" width="400" height="200">
+            <img src="Resources/images/melBack.JPG" alt="Head coach" width="400" height="200">
+            <img src="Resources/images/track5.JPG" alt="Track night group picture" width="400" height="200">
         </div>
         <div>
             <h2>
@@ -91,6 +100,5 @@
             </div>
         </div>
     </footer>
-    <script src="src/javascript/secretPage.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-    background-color:black;
+    background-color:111827;
     overflow:auto;
     text-align: justify;
     color:white;
@@ -21,9 +21,23 @@ h1.pageTitle {
     font-family: 'Courier New', Courier, monospace;
 }
 p, h2, h3, h4, h5 {
-    font-family:'Times New Roman', Times, serif;
     text-align: center;
 }
+
+#myVideo {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+  .content {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
 .longtext {
     width: 80%;
     margin: auto;
@@ -61,7 +75,6 @@ div.navbar {
     float: none;
     border-bottom: 5px solid #1aa89c;
 }
-
 div.selectTest {
     align-items: center;
     justify-content: center;
@@ -190,14 +203,14 @@ a.inLineLink:active {
     text-decoration: underline;;
 }
 
-div.scroll-container {
+#scrollcontainer {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
     padding: 5px;
   }
 
-div.scroll-container img {
+#scrollcontainer img {
     padding: 0px;
     }
 

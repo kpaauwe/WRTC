@@ -1,25 +1,20 @@
+<!--March 10th Lecture Example-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-div {
-  height: 500px;
-  width: 500px;
-  background-color: red;
-  rotate: 60deg;
-  font-size: 50px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooklyn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900">
-
-<h3>Rotate property</h3>
-<div>Hello</div>
-<div style="background-color: green">Goodbye</div>
-<div style="background-color: blue">You again?</div>
-<br>
-<p>Rotates div element 30 degrees clockwise around z-axis.</p>
-<p>Try to change rotate value to -30 degrees and see what happens.</p>
-
+<body>
+  <div id="brooklyn" class="relative text-center">
+    <img src="http://csci.viu.ca/~lopintof/brooklyn/images/brooklyn.jpg" alt="Photo of Brooklyn from Space">
+    <div class="w-full absolute top-0 left-0 text-center mt-10">
+      <h2 class="text-4l font-bold text-white text-left translate-x-16">Brooklyn</h2>
+      <h4 class="text-4l text-white text-left translate-x-16 animate-pulse">New York City</h4>
+      <button class="mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded">Test Button</button>
+    </div>
+  </div>
 </body>
 </html>

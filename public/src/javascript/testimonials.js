@@ -41,4 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex + 1) % testimonials.length; //cycle forward through testimonials
         showTestimonial(currentIndex , 'forward');
     });
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex, 'forward');
+    }, 15000)
 });
